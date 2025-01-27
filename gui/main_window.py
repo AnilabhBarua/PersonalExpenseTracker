@@ -1,7 +1,14 @@
 import sys
-sys.path.append('src')
-import tkinter as tk
+import os
+
+# Add the root directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.expense_manager import add_expense
+
+
+import tkinter as tk
+
 
 def submit_expense():
     try:
